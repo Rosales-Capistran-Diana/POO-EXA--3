@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Examen_Ejercicio2_Inventario">
+  <ClassDiagramComponents>
+    <Class name="Examen_Ejercicio2_Inventario" package="examen_ejercicio2_inventario" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Inventario" package="examen_ejercicio2_inventario" visibility="public" xPosition="20.0" yPosition="171.0">
+      <Fields>
+        <Field name="productos" type="Producto[]" visibility="private"/>
+        <Field name="contar" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addProduct" returnType="void" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="removeProduct" returnType="void" visibility="public">
+          <Argument type="int" name="productoId"/>
+        </Method>
+        <Method name="searchProduct" returnType="Producto" visibility="public">
+          <Argument type="int" name="productoId"/>
+        </Method>
+        <Method name="displayInventory" returnType="void" visibility="public"/>
+        <Method name="saveToFile" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="loadFromFile" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="examen_ejercicio2_inventario" visibility="public" xPosition="356.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="cantidad"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="examen_ejercicio2_inventario.Inventario" target="examen_ejercicio2_inventario.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
