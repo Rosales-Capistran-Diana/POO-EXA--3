@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Examen_Ejercicio1">
+  <ClassDiagramComponents>
+    <Class name="StudentManagementSystem" package="problemaexamen" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="estudiantes" type="List&lt;Estudiante&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addStudent" returnType="void" visibility="public">
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="getStudent" returnType="Estudiante" visibility="public">
+          <Argument type="int" name="rollNumber"/>
+        </Method>
+        <Method name="storeData" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="loadData" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estudiante" package="problemaexamen" visibility="public" xPosition="393.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="numeroLista" type="int" visibility="private"/>
+        <Field name="grado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="numeroLista"/>
+          <Argument type="String" name="grado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getNumeroLista" returnType="int" visibility="public"/>
+        <Method name="getGrado" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="problemaexamen.StudentManagementSystem" target="problemaexamen.Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estudiantes" source="problemaexamen.StudentManagementSystem" target="problemaexamen.Estudiante" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Estudiante&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
